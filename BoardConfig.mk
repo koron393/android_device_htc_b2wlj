@@ -73,3 +73,44 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/b2wlj/releasetools
 # Inherit from the proprietary version
 -include vendor/htc/b2wlj/BoardConfigVendor.mk
 
+# TWRP Build Flags
+TW_THEME := portrait_hdpi
+TW_HAS_DOWNLOAD_MODE := true
+TW_INCLUDE_CRYPTO := true
+TW_NO_EXFAT_FUSE := true
+TWHAVE_SELINUX := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+
+# MultiROM config
+TARGET_RECOVERY_IS_MULTIROM := true
+MR_DEVICE_VARIANTS := b2wlj
+MR_DEVICE_VARIANTS += htc_b2wlj
+DEVICE_RESOLUTION := 1080x1920
+MR_ALLOW_NKK71_NOKEXEC_WORKAROUND := true
+MR_NO_KEXEC := enabled
+MR_DEVICE_HOOKS := device/htc/b2wlj/multirom/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 4
+#MR_DEVICE_SPECIFIC_VERSION := a
+MR_DPI := xhdpi
+MR_DPI_FONT := 340
+MR_ENCRYPTION := true
+MR_ENCRYPTION_SETUP_SCRIPT := device/htc/b2wlj/multirom/mr_cp_crypto.sh
+MR_FSTAB := device/htc/b2wlj/multirom/mrom.fstab
+MR_INIT_DEVICES := device/htc/b2wlj/multirom/mr_init_devices.c
+MR_INPUT_TYPE := type_b
+MR_KEXEC_MEM_MIN := 0x03200000
+MR_KEXEC_DTB := true
+MR_PIXEL_FORMAT := "RGBX_8888"
+MR_USE_MROM_FSTAB := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+
+# Override TW_THEME to use MultiROM 1080x1920 theme
+TW_CUSTOM_THEME := bootable/recovery/gui/themes_multirom/1080x1920
+
+#include device/common/version-info/MR_REC_VERSION.mk
+#ifeq ($(MR_REC_VERSION),)
+#MR_REC_VERSION := $(shell date -u +%Y%m%d)-01
+#endif
+#BOARD_MKBOOTIMG_ARGS += --board mrom$(MR_REC_VERSION)
