@@ -57,6 +57,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.carrier.rc
 
+# Variant linking script
+PRODUCT_COPY_FILES += \
+    device/htc/b2wlj/releasetools/variant_script.sh:install/bin/variant_script.sh
+
 # Recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     init.recovery.qcom.rc \
