@@ -52,5 +52,4 @@ PRODUCT_BOOT_JARS += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    NfcNci \
-    nfc_nci.pn54x.default
+    NfcSony
