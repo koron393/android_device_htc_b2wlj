@@ -57,3 +57,8 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.carrier.rc
+
+# Recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    init.recovery.qcom.rc \
+    toybox_static
