@@ -53,3 +53,7 @@ PRODUCT_BOOT_JARS += \
 # NFC
 PRODUCT_PACKAGES += \
     NfcSony
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.carrier.rc
