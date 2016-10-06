@@ -75,27 +75,13 @@ void vendor_load_properties()
     if (strstr(bootmid, "0PAG10000")) {
         /* b2wlj */
         common_properties();
-        cdma_properties("0", "10");
+        gsm_properties("12");
         property_set("ro.product.model", "HTL23");
         property_set("ro.build.fingerprint", "htc/HTL23_jp_kdi/htc_b2wlj:4.4.2/KOT49H/368778.1:user/release-keys");
         property_set("ro.build.description", "1.17.970.1 CL368778 release-keys");
         property_set("ro.product.device", "htc_b2wlj");
         property_set("ro.build.product", "htc_b2wlj");
         property_set("ro.ril.oem.ecclist", "110,118,119,184110,184118,184119,186110,186118,186119");
-        property_set("ro.ril.enable.sdr", "0");
-        property_set("ro.ril.enable.r8fd", "0");
-        property_set("ro.ril.enable.pre_r8fd", "0");
-        property_set("ro.ril.disable.fd.plmn.prefix", "23402,23410,23411,23420");
-        property_set("ro.ril.set.mtusize", "1420");
-        property_set("ro.ril.air.enabled", "1");
-        property_set("ro.ril.wp.feature", "1");
-        property_set("ro.cdma.data_retry_config", "max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000");
-        property_set("ro.gsm.data_retry_config", "max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000");
-        property_set("ro.gsm.2nd_data_retry_config", "max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000");
-        property_set("ro.ril.gsm.to.lte.blind.redir", "1");
-        property_set("ro.config.svlte1x", "true");
-        property_set("ro.ril.def.agps.mode", "6");
-        property_set("ro.telephony.get_imsi_from_sim", "true");
     } else {
         /* b2ul */
         common_properties();
