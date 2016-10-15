@@ -53,3 +53,15 @@
 /dev/snfc_hsel			u:object_r:nfc_device:s0
 /nfc_record(/.*)?		u:object_r:system_data_file:s0
 #-SONY_NFC
+#+HTC_FELICA
+/dev/felica			u:object_r:felica_device:s0
+/dev/felica_pon			u:object_r:felica_device:s0
+/dev/felica_cen			u:object_r:felica_device:s0
+/dev/felica_rfs			u:object_r:felica_device:s0
+/dev/felica_rws			u:object_r:felica_device:s0
+/dev/felica_int			u:object_r:felica_device:s0
+/dev/felica_int_poll		u:object_r:felica_device:s0
+/dev/felica_uid			u:object_r:felica_device:s0
+/system/bin/felica_startup	u:object_r:felica_exec:s0
+/system/bin/felica_agent	u:object_r:felica_exec:s0
+/system/bin/felica_daemon	u:object_r:felica_exec:s0
