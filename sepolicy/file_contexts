@@ -41,3 +41,15 @@
 
 /sys/devices/platform/htc_battery/power_supply/battery(/.*)? u:object_r:sysfs_battery_supply:s0
 /sys/devices/platform/htc_battery/power_supply/usb(/.*)? u:object_r:sysfs_usb_supply:s0
+
+#+SONY_NFC
+/dev/ttyHSL5			u:object_r:nfc_device:s0
+/dev/snfc_pon			u:object_r:nfc_device:s0
+/dev/snfc_cen			u:object_r:nfc_device:s0
+/dev/snfc_rfs			u:object_r:nfc_device:s0
+/dev/snfc_intu			u:object_r:nfc_device:s0
+/dev/snfc_intu_polling		u:object_r:nfc_device:s0
+/dev/snfc_auto_polling		u:object_r:nfc_device:s0
+/dev/snfc_hsel			u:object_r:nfc_device:s0
+/nfc_record(/.*)?		u:object_r:system_data_file:s0
+#-SONY_NFC
